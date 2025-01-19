@@ -20,4 +20,10 @@ jobs:
     steps:
       - name: "Verificação da versão do nodejs atual"
         run: node --version
+      - name: "Definição da versão do node"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.13.0'
+      - name: "Verificação da versão do nodejs depois de atualizar"
+        run: node --version
       
